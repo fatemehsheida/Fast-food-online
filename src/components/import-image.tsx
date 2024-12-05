@@ -1,24 +1,24 @@
-// import barbican from'../assets/barbican.webp';
-// import BeckyBurger from'../assets/Becky-Burger.jpg';
-// import beefMushroomm from'../assets/beef-mushroomm.jpg';
-// import CaesarSalad from'../assets/Caesar-salad.jpeg';
-// import chilliBurger from'../assets/chilli-Burger.jpg';
-// import Hamburger from'../assets/Hamburger.jpeg';
-// import HotDogBulls from'../assets/Hot-Dog-Bulls.jpeg';
-// import Lasagna from'../assets/Lasagna.jpeg';
-// import MushroomBurger from'../assets/Mushroom-Burger.jpeg';
-// import NeapolitanPizza from'../assets/Neapolitan-Pizza.jpg';
-// import noshabe from'../assets/noshabe.webp';
-// import oliveBurger from'../assets/olive-Burger.jpg';
-// import PepperoniPizza from'../assets/Pepperoni-pizza.jpg';
-// import PercyChickenSteak from'../assets/Percy-Chicken-Steak.jpeg';
-// import Potato from'../assets/Potato.png';
-// import Seasonalsalad from'../assets/Seasonal-salad.jpg';
-// import Specialpizza from'../assets/Special-pizza.jpg';
-// import Steakandspinachpasta from'../assets/Steak-and-spinach-pasta.jpeg';
-// import steakPizza from'../assets/steak-Pizza.jpg';
-// import Turkeysandwich from'../assets/Turkeysandwich.jpeg';
+import { IFastFood } from "../types/index";
 
+interface todoItemProps {
+  food: IFastFood;
+  setFastFood: React.Dispatch<React.SetStateAction<IFastFood[]>>;
+}
 
+function FoodItem(props: todoItemProps) {
+  const { food, setFastFood } = props;
 
+  return (
+    <div key={food.id} className="w-60 h-60 shadow-slate-400 shadow-xl border p-3 justify-between flex flex-col items-start bg-slate-50">
+      <div >
+        <img className="w-52 h-28" src={food.path} alt="" />
+      </div>
+      <span className="font-semibold text-xl">{food.title}</span>
+      <span className="text-xs font-semibold">{food.description}</span>
+      <span className="font-semibold text-sm">{food.price}.00 تومان</span>
+      <div className="flex justify-between gap-3"></div>
+    </div>
+  );
+}
 
+export default FoodItem;
