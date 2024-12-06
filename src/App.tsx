@@ -1,16 +1,12 @@
 import "./App.css";
-import HeaderFood from "../src/components/HeaderFood";
-import Footer from "../src/components/Footer";
-import ContainerFood from "../src/components/ContainerFood";
+import Menu from "../src/pages/menu";
 import PlaceOrder from "../src/PlaceOrder";
 
 
 function App() {
   return (
     <div>
-      <HeaderFood />
-      <ContainerFood />
-      <Footer />
+      <Menu />
       {/* <PlaceOrder /> */}
     </div>
   );

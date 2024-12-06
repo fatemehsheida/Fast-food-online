@@ -154,12 +154,12 @@ export default function ContainerFood() {
     },
   ]);
   return (
-    <div className="bg-slate-100 w-full h-[95%] top-16 px-10 py-2 fixed">
+    <div className="bg-slate-100 w-full h-[60%] top-16 px-10 py-2 fixed overflow-hidden">
       <div className="text-neutral-800 font-bold text-2xl text-right">
         <p>منو</p>
       </div>
       <div>
-        <div className="w-full py-2 space-y-3 h-[420px] gap-5 overflow-y-scroll flex flex-wrap justify-center items-center ">
+        <div className="w-full py-1 space-y-1 h-[420px] gap-5 overflow-y-scroll flex flex-wrap justify-center items-center ">
           {FastFood.map((food) => (
             <FoodItem key={food.id} food={food} setFastFood={setFastFood} />
           ))}
