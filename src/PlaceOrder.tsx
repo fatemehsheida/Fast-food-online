@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function PlaceOrder() {
   const notify = () => 
-  toast(" !سفارش 4 مدت زمان تقریبی سفارش شما 30 دقیقه");
+  toast.success("سفارش شما  با شماره 8 ثبت شد.آماده سازی :60دقیقه");
   return (
     <div className="w-full h-screen relative flex justify-center items-center content-center">
       <div className="bg-slate-800/60 opacity-70 w-full h-full"></div>
@@ -46,8 +46,9 @@ export default function PlaceOrder() {
         <ToastContainer
     className="fixed top-1/2 left-1/2 transform translate-x-1/2 translate-y-1/2 text-left"
     autoClose={3000}
-    hideProgressBar={true}
+    hideProgressBar={false}
     closeOnClick
+  rtl
     />
       </div>
     </div>

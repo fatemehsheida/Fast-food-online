@@ -8,7 +8,7 @@ export default function ContainerFood() {
       id: 1,
       title: "بیکی برگر",
       price: 230,
-      description: "یک همبرگر بلژیکی منحصربه‌فرد است که در هلند نیز محبوب است",
+      description: "یک همبرگر بلژیکی منحصربه‌فرد است که در هلند نیز محبوب است.",
       path: "http://localhost:3000/assets/Becky-Burger.jpg",
     },
     {
@@ -47,21 +47,21 @@ export default function ContainerFood() {
       title: "هات داگ بولز",
       price: 320,
       description:
-        "هات داگ دست ساز 100% گوشت،بیکن،خیارشور،گوجه فرنگی،پیاز کاراملی،پنیر،سس مخصوص",
+        "هات داگ دست ساز 100% گوشت،بیکن،خیارشور،گوجه فرنگی،پیاز کاراملی،پنیر،سس مخصوص.",
       path: "http://localhost:3000/assets/Hot-Dog-Bulls.jpeg",
     },
     {
       id: 7,
       title: "لازانیا",
       price: 655,
-      description: "لایه‌های سه گانه پاستا ورقه‌ای، سس مخصوص و پنیر پیتزا",
+      description: "لایه‌های سه گانه پاستا ورقه‌ای، سس مخصوص و پنیر پیتزا.",
       path: "http://localhost:3000/assets/Lasagna.jpeg",
     },
     {
       id: 8,
       title: "قارچ برگر",
       price: 540,
-      description: "گوشت چرخ کرده با نمک، فلفل و ادویه‌جات دلخواه",
+      description: "گوشت چرخ کرده با نمک، فلفل و ادویه‌جات دلخواه.",
       path: "http://localhost:3000/assets/Mushroom-Burger.jpeg",
     },
     {
@@ -69,7 +69,7 @@ export default function ContainerFood() {
       title: "پیتزای ناپولیتن",
       price: 203,
       description:
-        "گوجه فرنگی خام، پنیر بال موزارلای تازه، ریحان تازه و روغن زیتون",
+        "گوجه فرنگی خام، پنیر بال موزارلای تازه، ریحان تازه و روغن زیتون.",
       path: "http://localhost:3000/assets/Neapolitan-Pizza.jpg",
     },
     {
@@ -97,14 +97,14 @@ export default function ContainerFood() {
       id: 13,
       title: "سیب زمینی",
       price: 120,
-      description: "سیب زمینی تنوری، سیب زمینی با سس قارچ و پنیر چدار",
+      description: "سیب زمینی تنوری، سیب زمینی با سس قارچ و پنیر چدار.",
       path: "http://localhost:3000/assets/Potato.png",
     },
     {
       id: 14,
       title: "سالاد فصل",
       price: 65,
-      description: " ترکیبات متنوعی از سبزیجات تازه است",
+      description: " ترکیبات متنوعی از سبزیجات تازه است.",
       path: "http://localhost:3000/assets/Seasonal-salad.jpg",
     },
     {
@@ -119,7 +119,7 @@ export default function ContainerFood() {
       title: "پاستا استیک و اسفناج",
       price: 652,
       description:
-        "۴۰۰ گرم، ۱۰۰ گرم فیله گوساله، پاستا دست ساز فتوچینی، قارچ و اسفناج، خامه، پنیر پارمسان",
+        "۴۰۰ گرم، ۱۰۰ گرم فیله گوساله، پاستا دست ساز فتوچینی، قارچ و اسفناج، خامه، پنیر پارمسان.",
       path: "http://localhost:3000/assets/Steak-and-spinach-pasta.jpeg",
     },
     {
@@ -127,7 +127,7 @@ export default function ContainerFood() {
       title: "پیتزا استیک",
       price: 526,
       description:
-        "خمیر مخصوص چاودار، پنیر موزارلا، پنیر گودا، 170 گرم راسته گوساله گریل، قارچ، زیتون",
+        "خمیر مخصوص چاودار، پنیر موزارلا، پنیر گودا، 170 گرم راسته گوساله گریل، قارچ، زیتون.",
       path: "http://localhost:3000/assets/steak-Pizza.jpg",
     },
     {
@@ -135,7 +135,7 @@ export default function ContainerFood() {
       title: "ساندویچ بوقلمون",
       price: 216,
       description:
-        "120 گرم ژامبون بوقلمون 90%، کاهو، گوجه، سس مخصوص هایدا، نان باگت",
+        "120 گرم ژامبون بوقلمون 90%، کاهو، گوجه، سس مخصوص هایدا، نان باگت.",
       path: "http://localhost:3000/assets/Turkeysandwich.jpeg",
     },
     {
@@ -154,12 +154,12 @@ export default function ContainerFood() {
     },
   ]);
   return (
-    <div className="bg-slate-100 w-full h-[85%] absolute top-16 px-20 py-2">
+    <div className="bg-slate-100 w-full h-[95%] top-16 px-10 py-2 fixed">
       <div className="text-neutral-800 font-bold text-2xl text-right">
         <p>منو</p>
       </div>
       <div>
-        <div className="w-full px-4 py-3 space-y-3 min-h-44 gap-5 overscroll-contain overflow-hidden flex flex-wrap justify-center items-center ">
+        <div className="w-full py-2 space-y-3 h-[420px] gap-5 overflow-y-scroll flex flex-wrap justify-center items-center ">
           {FastFood.map((food) => (
             <FoodItem key={food.id} food={food} setFastFood={setFastFood} />
           ))}
