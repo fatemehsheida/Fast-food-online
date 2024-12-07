@@ -28,7 +28,7 @@ function FoodItem(props: todoItemProps) {
         </span>
         <div className="w-full flex flex-row items-center justify-between ">
         <span className="font-semibold text-sm text-orange-500 ">{food.price}.00 تومان</span>
-        <div className="w-1/3 px-2 py-1 text-sm font-semibold text-slate-100 bg-orange-400 items-center text-center rounded-full">افزودن</div>
+        <div className="w-1/3 px-2 py-1 text-sm font-semibold text-slate-100 bg-orange-400 items-center text-center rounded-full cursor-pointer">افزودن</div>
         </div>
       </div>
       </div>

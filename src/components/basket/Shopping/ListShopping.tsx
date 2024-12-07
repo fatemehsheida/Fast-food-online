@@ -12,12 +12,12 @@ export default function CartSopping() {
 <div className="w-full flex justify-between">
         <h3 className="font-bold text-xl ">نوشابه</h3>
         <div className="flex justify-center items-center gap-5  border-t-2 border-b-2 border-slate-200/50 rounded-lg">
-        <div className="bg-slate-400 p-1 texl-3xl rounded-sm">
+        <div className="bg-slate-400 p-1 texl-3xl rounded-sm cursor-pointer">
           <HiMiniMinusSmall />
         </div>
         
         <h3 className="text-slate-950texl-5xl">3</h3>
-        <div className="bg-orange-500 p-1 texl-3xl rounded-sm">
+        <div className="bg-orange-500 p-1 texl-3xl rounded-sm cursor-pointer">
           <IoAdd />
         </div>
         </div>
@@ -26,12 +26,12 @@ export default function CartSopping() {
       <div className="w-full flex justify-between">
         <h3 className="font-bold text-xl ">نوشابه</h3>
         <div className="flex justify-center items-center gap-5  border-t-2 border-b-2 border-slate-200/50 rounded-lg">
-        <div className="bg-slate-400 p-1 texl-3xl rounded-sm">
+        <div className="bg-slate-400 p-1 texl-3xl rounded-sm cursor-pointer">
           <HiMiniMinusSmall />
         </div>
         
         <h3 className="text-slate-950texl-5xl">3</h3>
-        <div className="bg-orange-500 p-1 texl-3xl rounded-sm">
+        <div className="bg-orange-500 p-1 texl-3xl rounded-sm cursor-pointer">
           <IoAdd />
         </div>
         </div>
@@ -40,12 +40,11 @@ export default function CartSopping() {
       <div className="w-full flex justify-between">
         <h3 className="font-bold text-xl ">نوشابه</h3>
         <div className="flex justify-center items-center gap-5  border-t-2 border-b-2 border-slate-200/50 rounded-lg">
-        <div className="bg-slate-400 p-1 texl-3xl rounded-sm">
+        <div className="bg-slate-400 p-1 texl-3xl rounded-sm cursor-pointer">
           <HiMiniMinusSmall />
         </div>
-        
         <h3 className="text-slate-950texl-5xl">3</h3>
-        <div className="bg-orange-500 p-1 texl-3xl rounded-sm">
+        <div className="bg-orange-500 p-1 texl-3xl rounded-sm cursor-pointer">
           <IoAdd />
         </div>
         </div>
