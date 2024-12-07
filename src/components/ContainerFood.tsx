@@ -31,7 +31,7 @@ export default function ContainerFood() {
       title: "برگر چیلی ",
       price: 260,
       description:
-        "نوعی همبرگر است که از یک نان ، یک تکه گوشت و یک سس مخصوص تشکیل شده است.",
+        "گوشت و سس مخصوص تشکیل شده است.",
       path: "http://localhost:3000/assets/chilli-Burger.jpg",
     },
     {
@@ -39,7 +39,7 @@ export default function ContainerFood() {
       title: "همبرگر",
       price: 62,
       description:
-        "همبرگر به یک غذای محبوب در میان فست فود ها و انتخاب بسیاری از افراد برای وعده های غذایی خود می باشد.",
+        "انتخاب بسیاری از افراد برای وعده های غذایی خود می باشد.",
       path: "http://localhost:3000/assets/Hamburger.jpeg",
     },
     {
@@ -47,7 +47,7 @@ export default function ContainerFood() {
       title: "هات داگ بولز",
       price: 320,
       description:
-        "هات داگ دست ساز 100% گوشت،بیکن،خیارشور،گوجه فرنگی،پیاز کاراملی،پنیر،سس مخصوص.",
+        "هات داگ دست ساز گوشت،بیکن،گوجه فرنگی،سس مخصوص.",
       path: "http://localhost:3000/assets/Hot-Dog-Bulls.jpeg",
     },
     {
@@ -119,7 +119,7 @@ export default function ContainerFood() {
       title: "پاستا استیک و اسفناج",
       price: 652,
       description:
-        "۴۰۰ گرم، ۱۰۰ گرم فیله گوساله، پاستا دست ساز فتوچینی، قارچ و اسفناج، خامه، پنیر پارمسان.",
+        " ۱۰۰ گرم فیله گوساله، پاستا دست ساز فتوچینی، قارچ و اسفناج.",
       path: "http://localhost:3000/assets/Steak-and-spinach-pasta.jpeg",
     },
     {
@@ -127,7 +127,7 @@ export default function ContainerFood() {
       title: "پیتزا استیک",
       price: 526,
       description:
-        "خمیر مخصوص چاودار، پنیر موزارلا، پنیر گودا، 170 گرم راسته گوساله گریل، قارچ، زیتون.",
+        "خمیر مخصوص چاودار، پنیر موزارلا، پنیر گودا، 170 گرم راسته گوساله گریل.",
       path: "http://localhost:3000/assets/steak-Pizza.jpg",
     },
     {
@@ -154,12 +154,12 @@ export default function ContainerFood() {
     },
   ]);
   return (
-    <div className="bg-slate-100 w-full h-[60%] top-16 px-10 py-2 fixed overflow-hidden">
+    <div className="bg-slate-100 w-full h-[56%] top-16 px-10 py-2 fixed overflow-hidden">
       <div className="text-neutral-800 font-bold text-2xl text-right">
         <p>منو</p>
       </div>
       <div>
-        <div className="w-full py-1 space-y-1 h-[420px] gap-5 overflow-y-scroll flex flex-wrap justify-center items-center ">
+        <div className="rtl w-full py-1 space-y-1 h-[420px] gap-5 overflow-y-scroll flex flex-wrap justify-center items-center bg-slate-100 pb-20">
           {FastFood.map((food) => (
             <FoodItem key={food.id} food={food} setFastFood={setFastFood} />
           ))}

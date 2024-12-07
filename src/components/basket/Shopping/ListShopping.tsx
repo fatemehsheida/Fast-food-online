@@ -3,8 +3,8 @@ import { HiMiniMinusSmall } from "react-icons/hi2";
 
 export default function CartSopping() {
   return (
-    <div className="flex flex-col items-start gap-2">
-      <div className="font-bold text-2xl text-slate-900">
+    <div className="flex flex-col items-start gap-2 pt-3">
+      <div className="font-bold text-2xl text-slate-900 ">
         <h2>سبد خرید</h2>
       </div>
 

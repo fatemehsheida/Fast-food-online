@@ -14,6 +14,7 @@ function FoodItem(props: todoItemProps) {
       className="w-60 h-60 shadow-slate-300 shadow-lg border p-3 justify-between flex flex-col items-start bg-slate-50"
     >
       <div>
+      <div>
         <img className="w-52 h-28" src={food.path} alt="" />
       </div>
       <div className="justify-between flex flex-col items-start gap-2">
@@ -21,10 +22,14 @@ function FoodItem(props: todoItemProps) {
         <span className="text-xs font-semibold text-right">
           {food.description}
         </span>
-        <span className="font-semibold text-sm">{food.price}.00 تومان</span>
+        <div className="w-full flex flex-row items-center justify-between ">
+        <span className="font-semibold text-sm text-orange-500 ">{food.price}.00 تومان</span>
+        <div className="w-1/3 px-2 py-1 text-sm font-semibold text-slate-100 bg-orange-400 items-center text-center rounded-full">افزودن</div>
+        </div>
       </div>
+      </div>
+      
 
-      <div className="flex justify-between gap-3"></div>
     </div>
   );
 }

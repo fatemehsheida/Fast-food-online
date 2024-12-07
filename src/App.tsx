@@ -5,7 +5,7 @@ import PlaceOrder from "../src/PlaceOrder";
 
 function App() {
   return (
-    <div>
+    <div className="bg-slate-100">
       <Menu />
       {/* <PlaceOrder /> */}
     </div>
