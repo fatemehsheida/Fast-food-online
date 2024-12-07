@@ -1,5 +1,5 @@
 import "./App.css";
-import HeaderFood from "../src/components/headerFood";
+import HeaderFood from "../src/components/HeaderFood";
 import Footer from "../src/components/Footer";
 import ContainerFood from "../src/components/ContainerFood";
 import PlaceOrder from "../src/PlaceOrder";
@@ -11,7 +11,7 @@ function App() {
       <HeaderFood />
       <ContainerFood />
       <Footer />
-      <PlaceOrder />
+      {/* <PlaceOrder /> */}
     </div>
   );
 }
