@@ -1,16 +1,12 @@
 import "./App.css";
-import HeaderFood from "../src/components/HeaderFood";
-import Footer from "../src/components/Footer";
-import ContainerFood from "../src/components/ContainerFood";
-import PlaceOrder from "../src/PlaceOrder";
-
+import Menu from "../src/pages/menu";
+import ChangePage from "./pages/changePage";
 
 function App() {
   return (
-    <div>
-      <HeaderFood />
-      <ContainerFood />
-      <Footer />
+    <div className="bg-slate-100">
+      <ChangePage/>
+      {/* <Menu /> */}
       {/* <PlaceOrder /> */}
     </div>
   );

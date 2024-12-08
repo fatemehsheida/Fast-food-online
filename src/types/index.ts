@@ -3,5 +3,7 @@ export interface IFastFood {
   title: string;
   price: string | number;
   description: string;
-  path: string
+  path: string;
+  Inventory: string | number;
+  
 }
