@@ -5,4 +5,5 @@ export interface IFastFood {
   description: string;
   path: string;
   Inventory: string | number;
+  
 }
