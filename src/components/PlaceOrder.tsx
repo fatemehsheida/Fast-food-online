@@ -29,12 +29,10 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
 
   return (
     <div className="w-full h-screen relative flex justify-center items-center content-center">
-      {/*بک گراند مدال*/}
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 z-10"></div>
 
       <div className="bg-slate-50 absolute flex flex-col justify-between w-1/2 h-1/2 px-6 py-2 rounded-xl z-20">
         <div className="flex flex-row gap-5 ">
-          {/*بستن مدال */}
           <i
             className="font-bold text-3xl text-right cursor-pointer"
             onClick={closePlaceOrder}

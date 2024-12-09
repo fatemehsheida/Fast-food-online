@@ -3,12 +3,11 @@ import CartSopping from "./ListShopping";
 
 interface ShoppingProps {
   setPage: (value: number) => void;
-  onOrderPlaced: () => void; // تابعی که برای تغییر state استفاده می‌شود
+  onOrderPlaced: () => void; 
 }
 
 const Shopping: React.FC<ShoppingProps> = ({ setPage, onOrderPlaced }) => {
   const handleOrder = () => {
-    // وقتی که سفارش ثبت می‌شود، تابع onOrderPlaced فراخوانی می‌شود
     onOrderPlaced();
   };
 
