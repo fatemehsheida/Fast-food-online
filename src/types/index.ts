@@ -11,7 +11,6 @@ export interface IFastFood {
 }
 
 
-
 export interface CartItemType extends IFastFood{
 qty: number;
 }
