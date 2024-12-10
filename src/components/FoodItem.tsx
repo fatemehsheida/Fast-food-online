@@ -9,16 +9,8 @@ type ProductCartType = {
 function FoodItem({ product, setCart, cart }: ProductCartType) {
   function handeleAddToCartButton() {
     setCart((prev) => {
-      //Copy to make changes
       const temp = [...prev];
       const found = temp.find((item) => item.id === product.id);
-      if (found) {
-        found.qty++;
-      } else {
-        // remove available form object
-        const newCartItem = { ...product, qty: 1 };
-      }
-
       return prev;
     });
   }
