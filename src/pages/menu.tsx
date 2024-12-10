@@ -26,7 +26,7 @@ const Menu: React.FC<MenuProps> = ({ setPage }) => {
     <div>
       <HeaderFood />
       <Shopping setPage={setPage} onOrderPlaced={handleOrderPlacement} />
-      <ContainerFood />
+      <ContainerFood ProductList={ProductList}/>
       <Footer />
       {showPlaceOrder && <PlaceOrder setPage={setPage} closePlaceOrder={closePlaceOrder} />}
     </div>

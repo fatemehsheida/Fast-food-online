@@ -10,7 +10,7 @@ import { IFastFood } from "../../../types/index";
 
 // props: listCartProps
 
-export default function CartSopping() {
+export default function CartShopping() {
   // const { food } = props;
   return (
     <div className="flex flex-col items-start gap-2 pt-3">
