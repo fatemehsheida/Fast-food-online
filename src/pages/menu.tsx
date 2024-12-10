@@ -1,18 +1,21 @@
-import { useState } from 'react';
+import { useState } from "react";
 import HeaderFood from "../../src/components/HeaderFood";
 import Footer from "../../src/components/Footer";
 import ContainerFood from "../../src/components/ContainerFood";
-import Shopping from "../components/basket/Shopping/Shopping";
+import Shopping from "../components/Shopping";
 import PlaceOrder from "../components/PlaceOrder";
-import { IFastFood } from "../types"; 
+import { IFastFood } from "../types";
 
 interface MenuProps {
   setPage: (value: number) => void;
 }
 
 const Menu: React.FC<MenuProps> = ({ setPage }) => {
-
   const [showPlaceOrder, setShowPlaceOrder] = useState(false);
+//   const [items, setItems] = useState([]);
+// function handleAdd(item){
+//   setItems((items) => [...items], item)
+// }
 
 
   const handleOrderPlacement = () => {
@@ -20,7 +23,7 @@ const Menu: React.FC<MenuProps> = ({ setPage }) => {
   };
 
   const closePlaceOrder = () => {
-    setShowPlaceOrder(false);  
+    setShowPlaceOrder(false);
   };
 
   const ProductList: IFastFood[] = [
@@ -189,17 +192,21 @@ const Menu: React.FC<MenuProps> = ({ setPage }) => {
       path: "http://localhost:3000/assets/barbican.webp",
       Inventory: 25,
     },
-  ]
-
-
+  ];
 
   return (
     <div>
       <HeaderFood />
-      <Shopping setPage={setPage} onOrderPlaced={handleOrderPlacement} />
-      <ContainerFood ProductList={ProductList}/>
+      <ContainerFood ProductList={ProductList} />
+      <Shopping
+        setPage={setPage}
+        onOrderPlaced={handleOrderPlacement}
+        ProductList={ProductList}
+      />
       <Footer />
-      {showPlaceOrder && <PlaceOrder setPage={setPage} closePlaceOrder={closePlaceOrder} />}
+      {showPlaceOrder && (
+        <PlaceOrder setPage={setPage} closePlaceOrder={closePlaceOrder} />
+      )}
     </div>
   );
 };

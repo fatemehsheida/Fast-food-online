@@ -14,7 +14,6 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
     setCart((prev) => {
       const updatedCart = [...prev];
       const found = updatedCart.find((item) => item.id === product.id);
-
       if (found) {
         found.qty++;
       } else {
@@ -27,22 +26,22 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
     });
   }
 
-  // function handledecreaseToCartButton() {
-  //   setCart((prev) => {
-  //     const updatedCart = [...prev];
-  //     const found = updatedCart.find((item) => item.id === product.id);
+  function handledecreaseToCartButton() {
+    setCart((prev) => {
+      let updatedCart = [...prev];
+      const found = updatedCart.find((item) => item.id === product.id);
 
-  //     if (found) {
-  //       found.qty++;
-  //     } else {
-  //       const newCartItem: CartItemType = { ...product, qty: 1 };
-  //       updatedCart.push(newCartItem);
-  //     }
+      if (found) {
+        if (found.qty > 1) {
+          found.qty--;
+        } else {
+          updatedCart = updatedCart.filter((item) => item.id !== product.id);
+        }
+      }
 
-  //     return updatedCart;
-  //   });
-  // }
-  
+      return updatedCart;
+    });
+  }
 
   return (
     <div
@@ -78,7 +77,10 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
                   <IoAdd />
                 </button>
                 <span>{cart.find((item) => item.id === product.id)?.qty}</span>
-                <button onClick={handledecreaseToCartButton} className=" rounded-full px-1 bg-red-500 text-white transition-all duration-200 hover:bg-rose-700">
+                <button
+                  onClick={handledecreaseToCartButton}
+                  className=" rounded-full px-1 bg-red-500 text-white transition-all duration-200 hover:bg-rose-700"
+                >
                   <HiMiniMinusSmall />
                 </button>
               </div>

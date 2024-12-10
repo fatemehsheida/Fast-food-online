@@ -12,18 +12,41 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
   closePlaceOrder,
 }) => {
   const [Count, setCount] = useState(0);
+  const [username, setUsername] = useState('');
+  const [usernumber, setUserNmber] = useState('');
+  const [address, setAddress] = useState('');
+
 
   function handleCounter() {
     setCount(Count + 1);
   }
 
-  const notify = () =>{
+  const notifySuccess = () =>{
     toast.success(
       <div className="text-right text-xl font-thin ">
         <p>سفارش شما با شماره {Count} ثبت شد.</p>
         <p>آماده سازی:60 دقیقه</p>
       </div>
     );
+  }
+
+
+
+  const notifyError = () =>{
+    toast.error(
+      <div className="text-right text-xl font-thin ">
+        <p>لطفا همه فیلد هارو پر کنید.</p>
+      </div>
+    );
+  }
+
+  const handleSubmit = () => {
+    if(username === '' || usernumber === '' || address === ''){
+      notifyError();
+    }else{
+      notifySuccess();
+      handleCounter()
+    }
   }
 
 
@@ -50,6 +73,8 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
             id="username"
             placeholder="نام کامل"
             className="border-slate-300 border-2 rounded-lg py-2 px-3"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
           <input
             type="number"
@@ -57,17 +82,21 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
             id="usernumber"
             placeholder="شماره تماس"
             className="border-slate-300 border-2 rounded-lg py-2 px-3"
+            value={usernumber}
+            onChange={(e) => setUserNmber(e.target.value)}
           />
           <textarea
             name="address"
             id="address"
             placeholder="آدرس"
             className="border-slate-300 border-2 rounded-lg py-2 px-3"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
           ></textarea>
           <button
             type="button"
-            className="cursor-pointer bg-orange-600 rounded-lg py-2 text-slate-100 text-lg"
-            onClick={() => {notify(); handleCounter()}}
+            className="cursor-pointer bg-orange-600 rounded-lg py-2 text-slate-50 text-lg"
+            onClick={handleSubmit}
           >
             ثبت سفارش
           </button>
