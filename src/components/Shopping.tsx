@@ -97,9 +97,9 @@ const Shopping: React.FC<ShoppingProps> = ({
 
         <h2 className="font-bold text-xl text-slate-900">
           جمع کل:
-          {/* {cart.reduce(function (accumulator, currentValue) {
+          {cart.reduce(function (accumulator, currentValue) {
             return accumulator + currentValue.qty * currentValue.price;
-          }, 0)} */}
+          }, 0)}
           تومان
         </h2>
       </div>

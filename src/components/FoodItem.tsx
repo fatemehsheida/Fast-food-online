@@ -14,7 +14,6 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
     setCart((prev) => {
       const updatedCart = [...prev];
       const found = updatedCart.find((item) => item.id === product.id);
-
       if (found) {
         found.qty++;
       } else {
