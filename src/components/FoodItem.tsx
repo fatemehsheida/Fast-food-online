@@ -23,6 +23,7 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
       }
 
       return updatedCart;
+
     });
   }
 
