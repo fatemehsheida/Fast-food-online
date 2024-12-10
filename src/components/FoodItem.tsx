@@ -8,19 +8,33 @@ type ProductCartType = {
   setCart: React.Dispatch<React.SetStateAction<CartItemType[]>>;
 };
 function FoodItem({ product, setCart, cart }: ProductCartType) {
-  function handeleAddToCartButton() {
+  // function handleAddToCartButton() {
+  //   setCart((prev) => {
+  //     //Copy to make changes
+  //     const temp = [...prev];
+  //     const found = temp.find((item) => item.id === product.id);
+  //     if (found) {
+  //       found.qty++;
+  //     } else {
+  //       // remove available form object
+  //       const newCartItem = { ...product, qty: 1 };
+  //     }
+
+  //     return prev;
+  //   });
+  // }
+  function handleAddToCartButton() {
     setCart((prev) => {
-      //Copy to make changes
-      const temp = [...prev];
-      const found = temp.find((item) => item.id === product.id);
+      const updatedCart = [...prev];
+      const found = updatedCart.find((item) => item.id === product.id);
+
       if (found) {
         found.qty++;
       } else {
-        // remove available form object
-        const newCartItem = { ...product, qty: 1 };
+        updatedCart.push({ ...product, qty: 1 });
       }
 
-      return prev;
+      return updatedCart;
     });
   }
 
@@ -49,7 +63,7 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
               {product.price}.00 تومان
             </span>
             <div
-              onClick={handeleAddToCartButton}
+              onClick={handleAddToCartButton}
               className="w-1/3 px-2 py-1 text-sm font-semibold text-slate-100 bg-orange-400 items-center text-center rounded-full cursor-pointer hover:bg-orange-700 hover:opacity-80 transition-all duration-300"
             >
               افزودن
