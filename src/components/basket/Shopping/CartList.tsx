@@ -30,6 +30,7 @@ function CartList() {
 
               </h3>
             </div>
+            <div>
             {
   
 
@@ -37,7 +38,9 @@ function CartList() {
   //   return accumulator + currentValue.qty * currentValue.price;
   // },0)
 
-}
+}         
+            </div>
+ 
             <div>
               <FaRegTrashCan
                 size={22}

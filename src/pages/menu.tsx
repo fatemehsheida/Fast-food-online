@@ -13,7 +13,7 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ setPage }) => {
 
   const [showPlaceOrder, setShowPlaceOrder] = useState(false);
-
+  const [CartItemList, setCartItemList] = useState();
 
   const handleOrderPlacement = () => {
     setShowPlaceOrder(true);
@@ -196,8 +196,8 @@ const Menu: React.FC<MenuProps> = ({ setPage }) => {
   return (
     <div>
       <HeaderFood />
-      <Shopping setPage={setPage} onOrderPlaced={handleOrderPlacement} />
       <ContainerFood ProductList={ProductList}/>
+      <Shopping setPage={setPage} onOrderPlaced={handleOrderPlacement} />
       <Footer />
       {showPlaceOrder && <PlaceOrder setPage={setPage} closePlaceOrder={closePlaceOrder} />}
     </div>

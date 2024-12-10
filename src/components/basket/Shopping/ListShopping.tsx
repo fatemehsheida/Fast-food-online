@@ -15,7 +15,7 @@ export default function CartShopping() {
         {/* <CartList/> */}
 
         {cart.map((item) => (
-          <CartList />
+          <CartList key={item.id}  />
         ))}
       </div>
 
