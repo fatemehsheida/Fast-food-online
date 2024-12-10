@@ -1,3 +1,5 @@
+import { IoAdd } from "react-icons/io5";
+import { HiMiniMinusSmall } from "react-icons/hi2";
 import { CartItemType, IFastFood } from "../types/index";
 
 type ProductCartType = {
@@ -8,21 +10,6 @@ type ProductCartType = {
   setCart: React.Dispatch<React.SetStateAction<CartItemType[]>>;
 };
 function FoodItem({ product, setCart, cart }: ProductCartType) {
-  // function handleAddToCartButton() {
-  //   setCart((prev) => {
-  //     //Copy to make changes
-  //     const temp = [...prev];
-  //     const found = temp.find((item) => item.id === product.id);
-  //     if (found) {
-  //       found.qty++;
-  //     } else {
-  //       // remove available form object
-  //       const newCartItem = { ...product, qty: 1 };
-  //     }
-
-  //     return prev;
-  //   });
-  // }
   function handleAddToCartButton() {
     setCart((prev) => {
       const updatedCart = [...prev];
@@ -31,12 +18,30 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
       if (found) {
         found.qty++;
       } else {
-        updatedCart.push({ ...product, qty: 1 });
+        const newCartItem: CartItemType = { ...product, qty: 1 };
+        updatedCart.push(newCartItem);
       }
 
       return updatedCart;
     });
   }
+
+  // function handledecreaseToCartButton() {
+  //   setCart((prev) => {
+  //     const updatedCart = [...prev];
+  //     const found = updatedCart.find((item) => item.id === product.id);
+
+  //     if (found) {
+  //       found.qty++;
+  //     } else {
+  //       const newCartItem: CartItemType = { ...product, qty: 1 };
+  //       updatedCart.push(newCartItem);
+  //     }
+
+  //     return updatedCart;
+  //   });
+  // }
+  
 
   return (
     <div
@@ -62,12 +67,28 @@ function FoodItem({ product, setCart, cart }: ProductCartType) {
             <span className="font-semibold text-sm text-orange-500 ">
               {product.price}.00 تومان
             </span>
-            <div
-              onClick={handleAddToCartButton}
-              className="w-1/3 px-2 py-1 text-sm font-semibold text-slate-100 bg-orange-400 items-center text-center rounded-full cursor-pointer hover:bg-orange-700 hover:opacity-80 transition-all duration-300"
-            >
-              افزودن
-            </div>
+
+            {cart.findIndex((item) => item.id === product.id) > -1 ? (
+              <div className="flex w-1/3 justify-between">
+                <button
+                  onClick={handleAddToCartButton}
+                  className=" rounded-full px-1 bg-green-500 text-white transition-all duration-200 hover:bg-green-700"
+                >
+                  <IoAdd />
+                </button>
+                <span>{cart.find((item) => item.id === product.id)?.qty}</span>
+                <button onClick={handledecreaseToCartButton} className=" rounded-full px-1 bg-red-500 text-white transition-all duration-200 hover:bg-rose-700">
+                  <HiMiniMinusSmall />
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={handleAddToCartButton}
+                className="w-1/3 px-2 py-1 text-sm font-semibold text-slate-100 bg-orange-400 items-center text-center rounded-full cursor-pointer hover:bg-orange-700 hover:opacity-80 transition-all duration-300"
+              >
+                افزودن
+              </button>
+            )}
           </div>
         </div>
       </div>
