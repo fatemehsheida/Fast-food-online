@@ -1,7 +1,8 @@
 import { CartItemType, IFastFood } from "../types/index";
 
 type ProductCartType = {
-  product: CartItemType;
+  // product: CartItemType;
+  product: IFastFood;
   setFastFood: React.Dispatch<React.SetStateAction<IFastFood[]>>;
   cart: CartItemType[];
   setCart: React.Dispatch<React.SetStateAction<CartItemType[]>>;

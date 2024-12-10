@@ -4,7 +4,6 @@ import FoodItem from "../components/FoodItem";
 
 type ProductProps = {
   ProductList: IFastFood[];
-  
 };
 
 export default function ContainerFood({ ProductList }: ProductProps) {
