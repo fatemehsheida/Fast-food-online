@@ -1,25 +1,44 @@
-import { ToastContainer, toast } from 'react-toastify';
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 interface PlaceOrderProps {
   setPage: (value: number) => void;
-  closePlaceOrder: () => void; // تابع برای بستن مدال
+  closePlaceOrder: () => void;
 }
 
-const PlaceOrder: React.FC<PlaceOrderProps> = ({ setPage, closePlaceOrder }) => {
-  const notify = () => 
-    toast.success("سفارش شما با شماره 8 ثبت شد. آماده سازی :60 دقیقه");
+const PlaceOrder: React.FC<PlaceOrderProps> = ({
+  setPage,
+  closePlaceOrder,
+}) => {
+  const [Count, setCount] = useState(0);
+
+  function handleCounter() {
+    setCount(Count + 1);
+  }
+
+  const notify = () =>{
+    toast.success(
+      <div className="text-right text-xl font-thin ">
+        <p>سفارش شما با شماره {Count} ثبت شد.</p>
+        <p>آماده سازی:60 دقیقه</p>
+      </div>
+    );
+  }
+
 
   return (
     <div className="w-full h-screen relative flex justify-center items-center content-center">
-      {/* پس‌زمینه نیمه شفاف */}
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 z-10"></div>
 
-      {/* محتوای صفحه PlaceOrder */}
       <div className="bg-slate-50 absolute flex flex-col justify-between w-1/2 h-1/2 px-6 py-2 rounded-xl z-20">
         <div className="flex flex-row gap-5 ">
-          {/* دکمه بستن مدال */}
-          <i className="font-bold text-3xl text-right cursor-pointer" onClick={closePlaceOrder}>×</i>
+          <i
+            className="font-bold text-3xl text-right cursor-pointer"
+            onClick={closePlaceOrder}
+          >
+            ×
+          </i>
           <h2 className="font-bold text-2xl leading-8 text-center mb-4 h-10 flex content-end items-center">
             ثبت سفارش
           </h2>
@@ -48,7 +67,7 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({ setPage, closePlaceOrder }) => 
           <button
             type="button"
             className="cursor-pointer bg-orange-600 rounded-lg py-2 text-slate-100 text-lg"
-            onClick={notify}
+            onClick={() => {notify(); handleCounter()}}
           >
             ثبت سفارش
           </button>

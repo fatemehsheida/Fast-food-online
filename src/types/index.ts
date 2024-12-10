@@ -1,3 +1,5 @@
+
+
 export interface IFastFood {
   id: string | number;
   title: string;
@@ -6,4 +8,10 @@ export interface IFastFood {
   path: string;
   Inventory: string | number;
   
+}
+
+
+
+export interface CartItemType extends IFastFood{
+qty: number;
 }
