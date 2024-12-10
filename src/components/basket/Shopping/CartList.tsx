@@ -1,8 +1,15 @@
 import { IoAdd } from "react-icons/io5";
 import { HiMiniMinusSmall } from "react-icons/hi2";
 import { FaRegTrashCan } from "react-icons/fa6";
+import { useState } from "react";
+import type { CartItemType } from "../../../types/index";
 
 function CartList() {
+  const [cart, setCart] = useState<CartItemType[]>([]);
+
+
+
+  
   return (
     <div className="w-full flex justify-between">
           <h3 className="font-bold text-xl ">سبیبس</h3>
@@ -19,9 +26,18 @@ function CartList() {
 
           <div className="flex  gap-6">
             <div>
-              <h3 className="font-bold text-xl ">dgbd</h3>
-            </div>
+              <h3 className="font-bold text-xl ">
 
+              </h3>
+            </div>
+            {
+  
+
+  // cart.reduce(function(accumulator, currentValue){
+  //   return accumulator + currentValue.qty * currentValue.price;
+  // },0)
+
+}
             <div>
               <FaRegTrashCan
                 size={22}
