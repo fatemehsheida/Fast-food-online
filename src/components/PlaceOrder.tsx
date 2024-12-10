@@ -66,7 +66,7 @@ const PlaceOrder: React.FC<PlaceOrderProps> = ({
           ></textarea>
           <button
             type="button"
-            className="cursor-pointer bg-orange-600 rounded-lg py-2 text-slate-100 text-lg"
+            className="cursor-pointer bg-orange-600 rounded-lg py-2 text-slate-50 text-lg"
             onClick={() => {notify(); handleCounter()}}
           >
             ثبت سفارش
